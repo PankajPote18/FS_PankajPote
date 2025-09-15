@@ -31,11 +31,10 @@ FUNCTION getApproximateLocation(location):
     approximateLocation = applyGeospatialNoise(location)
     RETURN approximateLocation
 
+### 2.Trust Between Students
 
-2. Trust Between Students
-
-Problem: Students may not trust unknown users for ride-sharing.
-Solution: Show a “verified student” badge after college email/ID verification.
+**Problem:** Students may not trust unknown users for ride-sharing.
+**Solution:** Show a “verified student” badge after college email/ID verification.
 
 FUNCTION verifyStudentEmail(userId, collegeEmail):
     IF sendVerificationEmail(collegeEmail) AND receiveVerificationResponse():
@@ -54,14 +53,10 @@ FUNCTION getUserDisplayInfo(userId):
         displayInfo.verifiedBadge = true
     RETURN displayInfo
 
-3. Liability & Misuse Concerns
+### 3.Liability & Misuse Concerns
 
-Problem: Carpooling may face liability issues in case of accidents or misuse.
-Solution: Integrate with university system to apply policies.
-
-
-3.Carpooling may face liability issues in case of accidents or misuse
-Solution : Integrate with university system
+**Problem:** Carpooling may face liability issues in case of accidents or misuse.
+**Solution:** Integrate with university system to apply policies.
 
 FUNCTION integrateWithUniversitySystem(userId):
     userRecord = fetchUserFromUniversityDB(userId)
